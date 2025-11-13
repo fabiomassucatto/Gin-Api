@@ -1,11 +1,13 @@
 package main
 
 import (
+	"github.com/fabiomassucatto/gin-go-api/database"
 	"github.com/fabiomassucatto/gin-go-api/models"
 	"github.com/fabiomassucatto/gin-go-api/routes"
 )
 
 func main() {
+	database.ConectaComBancoDeDados()
 	models.Alunos = []models.Aluno{
 		{Nome: "Fabio Henrique", CPF: "123.456.789-00", RG: "12.345.678-9"},
 		{Nome: "Maria Silva", CPF: "987.654.321-00", RG: "98.765.432-1"},
