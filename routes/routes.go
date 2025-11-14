@@ -10,5 +10,6 @@ func HandleRequests() {
 	r.GET("/alunos", controllers.ExibeAlunos)
 	r.GET("/:nome", controllers.Saudacao)
 	r.POST("/alunos", controllers.CriaAluno)
+	r.GET("/alunos/:id", controllers.BuscaAluno)
 	r.Run()
 }
